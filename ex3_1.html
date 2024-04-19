@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let field_a = 0x1; // 00001
+    let field_b = 0x2; // 00010
+    let field_c = 0x4; // 00100
+    let field_d = 0x8; // 01000
+    let field_e = 0x10; // 10000
+
+    let fieldsSet = field_a | field_c | field_e;
+
+    if ((fieldsSet & field_a) && (fieldsSet & field_c)) {
+        alert("Fields A and C are Set");
+        // document.writeln((fieldsSet & field_a));
+    }
+</script>
+</body>
+</html>
