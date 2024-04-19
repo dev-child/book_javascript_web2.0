@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/global2.js"></script>
+<script type="text/javascript">
+    message = "I'm in the page";
+
+    function testScope() {
+        message += " called in testScope()";
+        alert(message)
+    }
+</script>
+<body onload="testScope();global2Print();globalPrint()">
+<script type="text/javascript">
+    message += " embedded in page";
+    document.writeln(message);
+</script>
+</body>%
+</html>
