@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="getQuote();">
+<script type="text/javascript">
+    let quoteArray = new Array(5);
+    quoteArray[0] = "Quote one";
+    quoteArray[1] = "Quote two";
+    quoteArray[2] = "Quote three";
+    quoteArray[3] = "Quote four";
+    quoteArray[4] = "Quote five";
+
+    function getQuote() {
+        do {
+            iValue = Math.random();
+            alert(iValue);
+            iValue *= 10;
+            alert(iValue);
+            iValue = Math.floor(iValue);
+            alert(iValue);
+        }
+        while (iValue > 4)
+        alert(quoteArray[iValue]);
+    }
+</script>
+</body>
+</html>

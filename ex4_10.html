@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let fifoArray = new Array();
+    fifoArray.push("Apple");
+    fifoArray.push("Banana");
+    let ln = fifoArray.push("Cherry");
+    document.writeln("length is " + ln + " and array is " + fifoArray + "<br/>");
+
+    for (let i = 0; i < ln; i++) {
+        document.writeln(fifoArray.shift() + "<br/>");
+    }
+
+    document.writeln("length now is " + fifoArray.length + "<br/><br/>>");
+
+    let fifoNewArray = new Array();
+
+    fifoNewArray.unshift("Learning");
+    fifoNewArray.unshift("Java");
+    ln = fifoNewArray.unshift("Script");
+
+    document.writeln("length is " + ln + " and array is " + fifoNewArray + "<br/>");
+
+    for (let i = 0; i < ln; i++) {
+        document.writeln("new length is " + fifoNewArray.length);
+    }
+</script>
+</body>
+</html>

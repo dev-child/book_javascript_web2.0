@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let dtNow = new Date();
+
+    dtNow.setDate(18);
+    dtNow.setMonth(10);
+    dtNow.setFullYear(1954);
+    dtNow.setMinutes(2);
+
+    document.writeln(dtNow.toString() + "<br/>");
+    document.writeln(dtNow.toLocaleString() + "<br/>");
+    document.writeln(dtNow.toLocaleDateString() + "<br/>");
+    document.writeln(dtNow.toLocaleTimeString() + "<br/>");
+
+    document.writeln(dtNow.toUTCString() + "<br/>");
+</script>
+</body>
+</html>
