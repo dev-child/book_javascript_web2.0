@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let inputString = "firstName=Shelly,lastName=Powers,state=Missouri,statement='this is a test, of split'";
+    let arrayTokens = inputString.split(",", 5);
+    for (let i in arrayTokens) {
+        document.writeln(arrayTokens[i] + "<br/>");
+        let newTokens = arrayTokens[i].split("=");
+        document.writeln(newTokens[1] + "<br/>")
+    }
+</script>
+</body>
+</html>

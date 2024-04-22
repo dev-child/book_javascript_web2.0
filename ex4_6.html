@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let regExp = /:\D*\s\d+\s\d+/;
+    let str = "This is a date:March 12 2005";
+    let resultString = str.match(regExp);
+    document.writeln("Date" + resultString);
+</script>
+</body>
+</html>
