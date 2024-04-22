@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        let stateCode = "NY";
+        let statePercentage = 0.0;
+        let taxPercentage = 0.0;
+
+        switch (stateCode) {
+            case "OR", "MA", "WI":
+                statePercentage = 0.5;
+                taxPercentage = 3.5;
+                break;
+            case "MO":
+                taxPercentage = 1.0;
+                statePercentage = 1.5;
+                break;
+            case "CA":
+            case "NY":
+            case "VT":
+                statePercentage = 2.6;
+                taxPercentage = 4.5;
+                break;
+            case "TX":
+                taxPercentage = 3.0;
+                break;
+            default:
+                taxPercentage = 2.0;
+                statePercentage = 2.3;
+        }
+
+        alert("tax is " + taxPercentage + " and state is " + statePercentage)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
