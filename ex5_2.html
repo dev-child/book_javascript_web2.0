@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let func = prompt("Enter function body:");
+    let x = prompt("Enter value of x:");
+    let y = prompt("Enter value of y:");
+
+    let op = new Function("x", "y", func);
+    let theAnswer = op(x, y);
+
+    document.writeln("Function is: " + func + "<br/>");
+    document.writeln("x is " + x + " y is : " + y + "<br/>");
+    document.writeln("The answer is: " + theAnswer);
+</script>
+</body>
+</html>

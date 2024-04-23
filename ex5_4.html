@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function checkColor(element, index, array) {
+        return (element >= 0 && element < 256);
+    }
+
+    function checkCount(element, index, array) {
+        return (element.length == 3);
+    }
+
+    let colors = new Array();
+    colors[0] = [0, 262, 255];
+    colors[1] = [255, 255, 255];
+    colors[2] = [255, 0, 0];
+    colors[3] = [0, 255, 0];
+    colors[4] = [0, 0, 255];
+    colors[5] = [-5, 999, 999];
+
+    let testedColors = new Array();
+    for (let i in colors) {
+        testedColors[i] = colors[i].filter(checkColor);
+    }
+
+    let newTested = testedColors.filter(checkCount);
+    for (let i in newTested) {
+        document.writeln(newTested[i] + "<br/>");
+    }
+</script>
+</body>
+</html>
