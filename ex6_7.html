@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function clickMe(evnt) {
+            evnt = evnt ? evnt : window.event;
+            alert(evnt.target + " " + evnt.type);
+            alert("Can be canceled? " + evnt.cancelable);
+            alert("Bubbling? " + evnt.bubbles);
+            alert(evnt.timeStamp);
+        }
+
+        window.onload = setup;
+
+
+        function setup(evnt) {
+            let evtObject = document.getElementById("clickme");
+
+            if (evtObject.addEventListener) {
+                document.addEventListener("click", clickMe, false);
+            } else if (evtObject.attachEvent) {
+                evtObject.attachEvent("onclick", clickMe);
+            } else if (evtObject.onclick) {
+                evtObject.onclick = clickMe;
+            }
+        }
+
+        function cleanUp() {
+            let evtObject = document.getElementById("clickme");
+            if (evtObject.detachEvent) {
+                evtObject.detachEvent("onclick", clickMe);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="clickme" style="background-color: #ff0; width: 200px; height: 200px; padding: 20px">
+    Click Me
+</div>
+</body>
+</html>
