@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function outerFunc(base) {
+        let punc = "!";
+
+        function returnString(ext) {
+            return base + ext + punc;
+        }
+
+        return returnString;
+    }
+
+    let baseString = outerFunc("Hello ");
+
+    let newString = baseString("Reader");
+    document.writeln(newString);
+
+    let anotherString = outerFunc("Hiya, Hey ");
+
+    let lastString = anotherString("you");
+    document.writeln(lastString);
+
+    document.writeln(outerFunc("1")(2))
+</script>
+</body>
+</html>
