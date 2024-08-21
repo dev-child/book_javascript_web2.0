@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let count = 0;
+
+    myFnc();
+
+    function myFnc() {
+        count++;
+        document.write("hello : " + count, "<br>");
+    }
+
+    myFnc();
+
+    // theFnc();
+    let theFnc = function () {
+        count++;
+        document.write("bye : " + count, "<br>");
+    }
+
+    theFnc();
+</script>
+</body>
+</html>
